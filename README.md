@@ -1,5 +1,4 @@
 # Game-Memory-With-Javascript
-### Creating game with javascript
 # Name of Game : Memory Game.
 ## Description:- 
 ## 1- This Game built on flip the cards and you will get your score.
