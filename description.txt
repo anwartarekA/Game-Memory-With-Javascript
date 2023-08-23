@@ -1,0 +1,15 @@
+                                    
+
+                                        
+
+                                        The nameof game --> Memory Game
+
+             .   To start the game you should write your name and click on ok.
+             .   your name will be saved in the info naming .
+             .   you should flip all cards to win the game .
+             .   you will get score for how many cards you slipt.
+             .   one card with 10 bonus.
+             .   the max score 80.
+             .   if you scored full score you will get layout and listen to voice wow and you score                       will be 80 above.
+             .   when the time finished you will get Game Over and layout with your score.
+ 
