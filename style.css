@@ -1,0 +1,349 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif , Tahoma;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+.name-project{
+    font-size: 18px;
+    margin: 30px auto 0px;
+    text-align: center;
+    background-color: #0047AB;
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 1px 1px 12px 2px black;
+}
+@media (min-width:360px) and (max-width:480px)
+{
+    .name-project{
+        transform: translateY(75px);
+        width: 200px;
+        font-size: 16px;
+    }
+}
+@media (min-width:480px) and (max-width:600px)
+{
+    .name-project{
+        width: 300px;
+        font-size: 18px;
+        transform: translate(215px,75px);
+    }
+}
+.info{
+    width: 1000px;
+    margin: 100px auto 0px;
+    background-color: #fff;
+    padding: 15px;
+    border: 2px #0047AB solid;
+    overflow: hidden;
+}
+
+.my-name{
+    float: left;
+    font-size: 18px;
+    padding: 7px;
+    width: 50%;
+}
+.my-tries{
+    float: right;
+    padding: 7px;
+    font-size: 18px;
+}
+.blocks-cards{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto 0px;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    border: 2px #0047AB solid;
+}
+
+.blocks-cards.stop{
+    cursor: no-drop;
+    pointer-events:none;
+}
+
+.blocks-cards .card{
+    margin: 15px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+
+.blocks-cards .front{
+    width: 200px;
+    height: 200px;
+    background-color: #36454F;
+    position: absolute;
+    border: 3px solid #0047AB ;
+}
+.blocks-cards .front::before{
+    content: '?';
+    color: #fff;
+    font-size: 150px;
+    margin-left: calc(100px - 55.09px / 2);
+    line-height: 200px;
+}
+.blocks-cards .back{
+    transform: rotateY(180deg);
+}
+.blocks-cards .face{
+    backface-visibility: hidden;
+}
+.blocks-cards .card.rotate,
+.blocks-cards .card.flip{
+    transform:rotateY(-180deg);
+}
+@media (min-width:360px) and (max-width:480px)
+{
+    .blocks-cards{
+        width: 100%;
+    }
+    .info{
+        width: 100%;
+    }
+    img{
+        width: 90px;
+        height: 100px;
+    }
+    .blocks-cards .face{
+        width: 90px;
+        height: 100px;
+    }
+    .blocks-cards .front::before
+    {
+        line-height: 100px;
+        margin-left: calc(43.27px / 2);
+        font-size: 100px;
+    }
+    .blocks-cards .card{
+        margin: 5px;
+    }
+}
+.layout{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color:rgba(0, 0, 0,0.8);
+}
+.btn{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: red;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 1px 0px 3px 1px #fff;
+    text-shadow: -1px 1px 1px #333;
+    transform: translate(-50%,-50%);
+    transition:background-color .5s ;
+}
+@media (min-width:360px) and (max-width:480px)
+{
+    .btn{
+        font-size: 18px;
+        width: 110px;
+        height: 50px;
+    }
+}
+.btn:hover{
+    background-color: #333;
+}
+.user-data{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color:rgba(0, 0, 0,0.8);
+    display: none;
+}
+.text{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    outline: none;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+}
+.text::placeholder{
+    color: #333;
+}
+.verify{
+    position: absolute;
+    top: 47.4%;
+    right: 37%;
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 1s;
+}
+
+.verify:hover{
+    background-color: red;
+    color: #fff;
+}
+@media (min-width:360px) and (max-width:480px)
+{
+    .text{
+        width: 200px;
+    }
+    .text::placeholder{
+        text-align: center;
+    }
+    .verify{
+        transform: translate(-80%, 50px);
+    }
+}
+
+@media (min-width:480px) and (max-width:600px)
+{
+    .verify{
+        transform: translate(70px, -1px);
+    }
+}
+.count{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 40px;
+    padding: 2px;
+    background-color: #333;
+    font-size: 17px;
+    text-align: center;
+    color: #fff;
+}
+.delete
+{
+    pointer-events:none;
+}
+.seconds{
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    padding: 5px 7px;
+    z-index: -1;
+    display: none;
+}
+
+.game_over{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #0047AB;
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    line-height: 700px;
+    display: none;
+}
+.leader{
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ddd;
+    margin: 10px auto;
+}
+@media (min-width:360px) and (max-width:480px)
+{
+    .leader
+    {
+        width: 100%;
+        margin:10px auto;
+        border: solid 2px #0047AB;
+    }
+}
+.score_gameover{
+    background-color: #fff;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    font-size: 20px;
+    display: none;
+}
+.leader .name,
+.leader .score {
+    background-color: #eee;
+    color: #333;
+    padding: 10px;
+    border-radius: 7px;
+}
+.prefict{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #88d60ecf;
+    line-height: 700px;
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    display: none;
+}
+.full_score{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 5px;
+    display: none;
+    z-index: 1;
+}
+.resize{
+    padding: 2px 7px;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 20px;
+    border-radius: 3px;
+    line-height: 25px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-weight: bolder;
+    box-shadow:2px 2px 3px 0px red;
+    display: none;
+}
+.resize:hover{
+    background-color: red;
+}

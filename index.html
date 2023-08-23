@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory-Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- name of project -->
+    <p class="name-project">Game Memory Game</p>
+    <!-- info informations -->
+    <div class="info">
+       <div class="my-name">
+        <p>Hello: </p>
+       </div>
+       <div class="my-tries">
+        wrong tries:<span>0</span>
+       </div>
+    </div>
+         <!-- cards -->
+    <div class="blocks-cards">
+        <div class="card1 card" data-number="one">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/one.png" alt="" >
+            </div>
+        </div>
+        <div class="card2 card" data-number="one">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/one.png" alt="" >
+            </div>
+        </div>
+        <div class="card3 card"  data-number="two">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/two.jpeg" alt="">
+            </div>
+        </div>
+        <div class="card4 card"  data-number="two">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/two.jpeg" alt="" >
+            </div>
+        </div>
+        <div class="card5 card"  data-number="three">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/three.jpg" alt="">
+            </div>
+        </div>
+        <div class="card6 card"  data-number="three">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/three.jpg" alt="" >
+            </div>
+        </div>
+        <div class="card7 card" data-number="four">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/four.jpg" alt="" >
+            </div>
+        </div>
+        <div class="card8 card" data-number="four">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/four.jpg" alt="">
+            </div>
+        </div>
+        <div class="card9 card"  data-number="five">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/five.jpg" alt="">
+            </div>
+        </div>
+        <div class="card10 card"  data-number="five">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/five.jpg" alt="" >
+            </div>
+        </div>
+        <div class="card11 card" data-number="six">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/six.jpg" alt="" >
+            </div>
+        </div>
+        <div class="card12 card" data-number="six">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/six.jpg" alt="" >
+            </div>
+        </div>
+        <div class="card13 card"  data-number="seven">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/seven.png" alt="">
+            </div>
+        </div>
+        <div class="card14 card"  data-number="seven">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/seven.png" alt="" >
+            </div>
+        </div>
+        <div class="card15 card" data-number="eight">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/eight.jpg" alt="" >
+            </div>
+        </div>
+        <div class="card16 card" data-number="eight">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="images/eight.jpg" alt="" >
+            </div>
+        </div>
+    </div>
+    <div class="layout"></div>
+    <button class="btn">StartGame</button>
+   <div class="user-data">
+    <input type="text" class="text" placeholder="Enter your name">
+    <button class="verify">ok</button>
+   </div>
+   <audio id="sucess" src="audios/success-1-6297.mp3" preload="auto"></audio>
+   <audio id="fail" src="audios/failure-drum-sound-effect-2-7184.mp3" preload="auto"></audio>
+   <audio id="mus_start" src="audios/futuristic-logo-3-versions-149429.mp3" preload ="auto" class="delete" ></audio>
+   <audio id="over" src="audios/negative_beeps-6008.mp3" preload="auto"></audio>
+   <span class="seconds"></span>
+   <div class="game_over">Game Over</div>
+   <div class="leader">
+   <div class="name">MyName:</div>
+   <div class="score">Max score:80</div>
+   </div>
+   <div class="score_gameover"></div>
+   <div class="prefict">perfict!</div>
+   <span class="full_score"></span>
+   <audio id="bravo"  src="audios/wow-male-voice-65342.mp3" preload="auto"></audio>
+   <span class="resize">^</span>
+    <script src="main.js"></script>
+</body>
+</html>
